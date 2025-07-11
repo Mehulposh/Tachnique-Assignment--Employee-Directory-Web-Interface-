@@ -36,6 +36,9 @@
 
             <button id="addBtn">Add Employee</button>
         </section>
+        <section id="emlpoyeeList">
+            
+        </section>
     </main>
 
     <footer>
