@@ -37,7 +37,7 @@
             <button id="addBtn">Add Employee</button>
         </section>
         <section id="emlpoyeeList">
-            
+             <#include "employeeCard.ftl">
         </section>
     </main>
 
@@ -46,5 +46,10 @@
             2025 Employee Directory App. All rights reserved. 
         </p>
     </footer>
+
+    <script>
+        window.initialEmployees = ${employees?json_string};
+    </script>
+    <script src="../JS/dashboard.js"></script>
 </body>
 </html>
