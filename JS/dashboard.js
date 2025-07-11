@@ -38,6 +38,8 @@ function EmployeeRender(data){
         employeeList.appendChild(card);
     });
 
+}
+
     //search employee
     search.addEventListener('input', () => {
         const value = search.value.trim().toLowerCase();
@@ -68,8 +70,14 @@ function EmployeeRender(data){
     });
 
 
-    
-}
+    //pagination of employees
+    employeePagination.addEventListener('change' , () => {
+        const pageSize = parseInt(employeePagination.value);
+        currPage = 1;
+        EmployeeRender(filteredEmployees);
+    })
+
+
 
 
 
