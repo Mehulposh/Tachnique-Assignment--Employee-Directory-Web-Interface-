@@ -57,11 +57,38 @@
 }
 
 #emlpoyeeList{
-    background-color: wheat;
+    background-color: rgb(223, 222, 222);
 }
 
 footer{
     background-color: black;
     padding: 20px;
     color: white;
+}
+
+.employee-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap:  wrap;
+    padding: 10px;
+}
+.employee-card{
+    border-radius: 8px;
+    background-color: white;
+    padding: 15px;
+}
+
+.employee-card p{
+    margin-bottom: 15px;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 10px; */
+}
+
+.actions button{
+    padding: 5px;
 }

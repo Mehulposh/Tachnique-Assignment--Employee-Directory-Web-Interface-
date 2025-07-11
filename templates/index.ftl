@@ -47,9 +47,7 @@
         </p>
     </footer>
 
-    <script>
-        window.initialEmployees = ${employees?json_string};
-    </script>
+    
     <script src="../JS/dashboard.js"></script>
 </body>
 </html>
