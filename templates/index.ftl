@@ -17,7 +17,7 @@
             <div id="filterbar">
                 <div class="sort">
                     <p>Sort:</p>
-                    <select>
+                    <select id='employeeSort'>
                         <option value="" selected >--Select--</option>
                         <option value="firstname">First Name</option>
                         <option value="department">Department</option>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="sort">
                     <p>Show:</p>
-                    <select>
+                    <select id='employeePagination'>
                         <option value="10" selected >10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
@@ -34,10 +34,7 @@
                 </div>
             </div>
 
-            <button 
-                id="addBtn"
-                
-            >
+            <button id="addBtn">
                 Add Employee
             </button>
         </section>
