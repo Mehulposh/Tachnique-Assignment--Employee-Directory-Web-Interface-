@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Directory Web Interface</title>
-    <link rel="stylesheet" href="./styles/styles.css ">
+    <link rel="stylesheet" href="../styles/styles.css ">
 </head>
 <body>
     <nav id="navBar">
@@ -38,12 +38,10 @@
                 Add Employee
             </button>
         </section>
-        <section id="emlpoyeeList">
-             <#include "employeeCard.ftl">
+        <section id="employeeList">
+             
         </section>
-        <section id="formSection" style="display:none;">
-            <#include "form.ftl">
-        </section>
+        
         
     </main>
 
@@ -53,7 +51,9 @@
         </p>
     </footer>
 
-    
+   <script>
+         window.employees  = ${employeesJson};
+    </script>
     <script src="../JS/dashboard.js"></script>
 </body>
 </html>

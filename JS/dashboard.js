@@ -1,10 +1,10 @@
-const employeeList = document.getElementById('emlpoyeeList');
+const employeeList = document.getElementById('employeeList');
 const search = document.getElementById('search');
 const employeeSort = document.getElementById('employeeSort');
 const employeePagination = document.getElementById('employeePagination');
 const addBtn = document.getElementById('addBtn');
 
-let employees = window.employees || [];
+let employees = window.employees ;
 let currPage = 1;
 let pageSize = parseInt(employeePagination.value);
 let filteredEmployees = [...employees];
@@ -17,7 +17,7 @@ function EmployeeRender(data){
     const newData = data.slice(startIndex,endIndex);
 
     if(newData.length === 0) {
-        employeeList.innerHTML = '<p> No Employees Found </p>';
+        employeeList.innerHTML = '<p id="missing"> No Employees Found </p>';
 
     }
 
@@ -31,8 +31,8 @@ function EmployeeRender(data){
             <p><strong>Department:</strong> ${emp.department}</p>
             <p><strong>Role:</strong> ${emp.role}</p>
             <div class="actions">
-                <button class="edit-btn" data-id="${emp.id}">Edit</button>
-                <button class="delete-btn" data-id="${emp.id}">Delete</button>
+                <button class="edit-btn" onclick="editEmployee('${emp.id}')" data-id="${emp.id}">Edit</button>
+                <button class="delete-btn" onclick="deleteEmployee('${emp.id}')" data-id="${emp.id}">Delete</button>
             </div> `;
 
         employeeList.appendChild(card);
@@ -72,7 +72,7 @@ function EmployeeRender(data){
 
     //pagination of employees
     employeePagination.addEventListener('change' , () => {
-        const pageSize = parseInt(employeePagination.value);
+        pageSize = parseInt(employeePagination.value);
         currPage = 1;
         EmployeeRender(filteredEmployees);
     })

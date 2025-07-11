@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory Web Interface</title>
+    <link rel="stylesheet" href="../styles/styles.css ">
+</head>
+<body>
+    <nav id="navBar">
+        <p>Employee Directory</p>
+        <input id="search" type="text" placeholder="Search by name or email"/>
+        <button id="filterBtn">Filter</button>
+    </nav>
+    <main>
+        <section id="lowerBar">
+            <div id="filterbar">
+                <div class="sort">
+                    <p>Sort:</p>
+                    <select id='employeeSort'>
+                        <option value="" selected >--Select--</option>
+                        <option value="firstname">First Name</option>
+                        <option value="department">Department</option>
+                    </select>
+                </div>
+                <div class="sort">
+                    <p>Show:</p>
+                    <select id='employeePagination'>
+                        <option value="10" selected >10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="addBtn">
+                Add Employee
+            </button>
+        </section>
+        <section id="employeeList">
+             
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <p>
+            2025 Employee Directory App. All rights reserved. 
+        </p>
+    </footer>
+
+   <script>
+         window.employees  = [{"firstName":"First1","lastName":"Last1","role":"Manager","id":"1","department":"HR","email":"user1@example.com"},{"firstName":"First2","lastName":"Last2","role":"Developer","id":"2","department":"IT","email":"user2@example.com"},{"firstName":"First3","lastName":"Last3","role":"Manager","id":"3","department":"HR","email":"user3@example.com"},{"firstName":"First4","lastName":"Last4","role":"Developer","id":"4","department":"IT","email":"user4@example.com"},{"firstName":"First5","lastName":"Last5","role":"Manager","id":"5","department":"HR","email":"user5@example.com"},{"firstName":"First6","lastName":"Last6","role":"Developer","id":"6","department":"IT","email":"user6@example.com"},{"firstName":"First7","lastName":"Last7","role":"Manager","id":"7","department":"HR","email":"user7@example.com"},{"firstName":"First8","lastName":"Last8","role":"Developer","id":"8","department":"IT","email":"user8@example.com"},{"firstName":"First9","lastName":"Last9","role":"Manager","id":"9","department":"HR","email":"user9@example.com"},{"firstName":"First10","lastName":"Last10","role":"Developer","id":"10","department":"IT","email":"user10@example.com"},{"firstName":"First11","lastName":"Last11","role":"Manager","id":"11","department":"HR","email":"user11@example.com"},{"firstName":"First12","lastName":"Last12","role":"Developer","id":"12","department":"IT","email":"user12@example.com"},{"firstName":"First13","lastName":"Last13","role":"Manager","id":"13","department":"HR","email":"user13@example.com"},{"firstName":"First14","lastName":"Last14","role":"Developer","id":"14","department":"IT","email":"user14@example.com"},{"firstName":"First15","lastName":"Last15","role":"Manager","id":"15","department":"HR","email":"user15@example.com"},{"firstName":"First16","lastName":"Last16","role":"Developer","id":"16","department":"IT","email":"user16@example.com"},{"firstName":"First17","lastName":"Last17","role":"Manager","id":"17","department":"HR","email":"user17@example.com"},{"firstName":"First18","lastName":"Last18","role":"Developer","id":"18","department":"IT","email":"user18@example.com"},{"firstName":"First19","lastName":"Last19","role":"Manager","id":"19","department":"HR","email":"user19@example.com"},{"firstName":"First20","lastName":"Last20","role":"Developer","id":"20","department":"IT","email":"user20@example.com"}];
+    </script>
+    <script src="../JS/dashboard.js"></script>
+</body>
+</html>
