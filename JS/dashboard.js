@@ -9,6 +9,19 @@ let currPage = 1;
 let pageSize = parseInt(employeePagination.value);
 let filteredEmployees = [...employees];
 
+
+//function to load employees from jsin file and localstorage
+async function loadFullEmployees(){
+    const response = await fetch('../EmployeeData.json');
+    const Oldemployees = await response.json();
+
+    const newEmployees = JSON.parse(localStorage.getItem('newEmployees') || '[]');
+
+    employees = [...Oldemployees, ...newEmployees];
+    filteredEmployees = [...employees];
+    EmployeeRender(filteredEmployees);
+}
+ 
 //Render the employeeList
 function EmployeeRender(data){
     employeeList.innerHTML = ' ';
@@ -93,8 +106,16 @@ function EmployeeRender(data){
     //delete employee
     window.deleteEmployee = function(id){
         if(confirm('Are you sure you want to delete this employee?')){
+
             employees = employees.filter(emp => emp.id !== id);
+
             filteredEmployees = [...employees];
+
+            // Also update localStorage
+            const localEmployees = JSON.parse(localStorage.getItem('newEmployees') || '[]');
+            const updatedLocalEmployees = localEmployees.filter(emp => String(emp.id) !== String(id));
+            localStorage.setItem('newEmployees', JSON.stringify(updatedLocalEmployees));
+
             EmployeeRender(filteredEmployees);
         }
     }
@@ -102,13 +123,4 @@ function EmployeeRender(data){
 
 
 //Initialize
-fetch('../EmployeeData.json')
-  .then(res => res.json())
-  .then(data => {
-    employees = data;
-    filteredEmployees = [...employees];
-    EmployeeRender(filteredEmployees);
-  })
-  .catch(err => {
-    console.error("Failed to load employees.json", err);
-  });
+loadFullEmployees();

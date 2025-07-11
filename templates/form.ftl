@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<nav id="navBar">
+        <p>Employee Directory</p>
+        <input id="search" type="text" placeholder="Search by name or email"/>
+        <button id="filterBtn">Filter</button>
+</nav>
 <main class="form-container">
     <h2>${employee?has_content?then("Edit Employee", "Add Employee")}</h2>
 
