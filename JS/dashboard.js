@@ -4,7 +4,7 @@ const employeeSort = document.getElementById('employeeSort');
 const employeePagination = document.getElementById('employeePagination');
 const addBtn = document.getElementById('addBtn');
 
-let employees = window.employees ;
+let employees = [];
 let currPage = 1;
 let pageSize = parseInt(employeePagination.value);
 let filteredEmployees = [...employees];
@@ -102,4 +102,13 @@ function EmployeeRender(data){
 
 
 //Initialize
-EmployeeRender(filteredEmployees);
+fetch('../EmployeeData.json')
+  .then(res => res.json())
+  .then(data => {
+    employees = data;
+    filteredEmployees = [...employees];
+    EmployeeRender(filteredEmployees);
+  })
+  .catch(err => {
+    console.error("Failed to load employees.json", err);
+  });
