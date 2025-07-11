@@ -78,11 +78,28 @@ function EmployeeRender(data){
     })
 
 
+    //add employee
+    addBtn.addEventListener('click' , () =>  {
+        window.location.href = 'form.html';
+    })
+
+
+    //edit employee
+    window.editEmployee = function(id) {
+        window.location.href = `form.html?id=${id}`
+    }
+
+
+    //delete employee
+    window.deleteEmployee = function(id){
+        if(confirm('Are you sure you want to delete this employee?')){
+            employees = employees.filter(emp => emp.id !== id);
+            filteredEmployees = [...employees];
+            EmployeeRender(filteredEmployees);
+        }
+    }
 
 
 
-
-
-document.getElementById('addBtn').addEventListener('click', () => {
-    document.getElementById('formSection').style.display = 'block';
-});
+//Initialize
+EmployeeRender(filteredEmployees);
