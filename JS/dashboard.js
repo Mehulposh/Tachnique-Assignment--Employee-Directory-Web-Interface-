@@ -51,7 +51,24 @@ function EmployeeRender(data){
 
         currPage = 1;
         EmployeeRender(filteredEmployees);
-    })
+    });
+
+
+    //sort employees
+    employeeSort.addEventListener('change' , () => {
+        const value = employeeSort.value;
+
+        if(!value) {
+            return;
+        }
+
+        filteredEmployees.sort((a,b) => a[value].localeCompare(b[value]));
+        currPage = 1;
+        EmployeeRender(filteredEmployees);
+    });
+
+
+    
 }
 
 
