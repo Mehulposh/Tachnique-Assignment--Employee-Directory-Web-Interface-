@@ -34,11 +34,20 @@
                 </div>
             </div>
 
-            <button id="addBtn">Add Employee</button>
+            <button 
+                id="addBtn"
+                
+            >
+                Add Employee
+            </button>
         </section>
         <section id="emlpoyeeList">
              <#include "employeeCard.ftl">
         </section>
+        <section id="formSection" style="display:none;">
+            <#include "form.ftl">
+        </section>
+        
     </main>
 
     <footer>

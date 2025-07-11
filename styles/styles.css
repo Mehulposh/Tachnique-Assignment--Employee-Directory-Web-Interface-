@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body{
+    background-color: aqua;
+}
+
 #navBar{
     background-color: black;
     color: white;
@@ -91,4 +95,83 @@ footer{
 
 .actions button{
     padding: 5px;
+}
+
+
+/* form styles */
+
+.form-container{
+    background-color: white;
+    width: 400px;
+    /* text-align: center; */
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+
+.form-container h2{
+    text-align: start;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.formName, .formLastname, .formrole {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.email_depart{
+    display: flex;
+    flex: 1;
+    
+}
+
+.formemail, .formdepart{
+    font-size: 20px;   
+}
+
+#email, #department{
+    margin-top: 10px;
+}
+#employeeForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: white; */
+}
+
+
+
+#employeeForm input{
+    height: 40px;
+    border-radius: 10px;
+
+}
+
+
+
+
+.formactions{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.formactions button{
+    height: 40px;
+    padding: 0 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#add{
+    background-color: blue;
+    color: white;
 }

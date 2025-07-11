@@ -14,23 +14,36 @@
     <form id="employeeForm">
         <input type="hidden" id="id" name="id" value="${employee.id!}">
         
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" value="${employee.firstName!}" required>
+        <div class='formName'>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" value="${employee.firstName!}" required>
+        </div>
 
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" value="${employee.lastName!}" required>
+        <div class='formLastname'>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" value="${employee.lastName!}" required>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" value="${employee.email!}" required>
+        <div class='email_depart'>
+            <div class='formemail'>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="${employee.email!}" required>
+            </div>
+            <div class='formdepart'>
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department" value="${employee.department!}" required>
+            </div>
+        </div>
+        
+        <div class='formrole'>
+            <label for="role">Role</label>
+            <input type="text" id="role" name="role" value="${employee.role!}" required>
 
-        <label for="department">Department</label>
-        <input type="text" id="department" name="department" value="${employee.department!}" required>
-
-        <label for="role">Role</label>
-        <input type="text" id="role" name="role" value="${employee.role!}" required>
-
-        <button type="submit">Save</button>
-        <button type="button" onclick="window.history.back()">Cancel</button>
+        </div>
+        <div class="formactions">
+            <button type="button" onclick="window.history.back()">Cancel</button>
+            <button id='add' type="submit">Add</button>
+        </div>
     </form>
 
     <p id="formError" class="error"></p>
