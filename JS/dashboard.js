@@ -8,12 +8,12 @@ const addBtn = document.getElementById('addBtn');
 
 //elements for filter form
 const filterBtn = document.getElementById('filterBtn');
-const filterContainer =  document.getElementsByClassName('filterContainer');
+const filterContainer =  document.getElementById('filterContainer');
 const filterForm = document.getElementById('filterForm');
 const formContainer = document.getElementById('filter_form');
 const resetBtn = document.getElementById('resetFilters');
 
-console.log(document.getElementsByClassName('filterContainer'));
+console.log(document.getElementById('filterContainer'));
 
 let employees = [];//employee data
 let currPage = 1;
@@ -23,7 +23,7 @@ let filteredEmployees = [...employees];//copy of the employees data
 //lestener to open filter form
 filterBtn.addEventListener('click' , () => {
     //toggle the visibility of the filter form
-    formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+    filterContainer.style.display = filterContainer.style.display === 'none' ? 'block' : 'none';
 });
 
 
@@ -84,7 +84,7 @@ resetBtn.addEventListener('click' , () => {
     EmployeeRender(filteredEmployees);
 
     //hide the filter form
-    formContainer.style.display = 'none';
+    filterContainer.style.display = 'none';
 })
 
 

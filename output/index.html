@@ -44,8 +44,8 @@
         
         
     </main>
-    <main class='filterContainer'>
-        <div id="filter_form" style="display: none;" class="filter-container">
+    <main id='filterContainer' style="display: none;">
+        <div id="filter_form"  class="filter-container">
             <h3>Filter Employees</h3>
             <form id="filterForm">
             <div>

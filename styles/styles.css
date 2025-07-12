@@ -194,13 +194,14 @@ footer{
 
 
 /* styles for filter form */
-.filterContainer{
+#filterContainer{
     background-color: white;
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
    padding: 15px;
+   
 }
 
 #filter_form h3{
@@ -220,3 +221,106 @@ footer{
     padding: 5px;
 }
 
+
+/* Tablet (768px – 1023px) */
+@media (max-width: 1023px) {
+    #navBar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #search {
+        width: 150px;
+    }
+
+    #lowerBar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    #filterbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .employee-card {
+        width: 200px;
+    }
+
+    .form-container {
+        width: 300px;
+    }
+
+    .email_depart {
+        flex-direction: column;
+    }
+}
+
+/* Mobile (< 767px) */
+@media (max-width: 767px) {
+    #navBar {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    #navBar p {
+        font-size: 22px;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    #lowerBar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #filterbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #addBtn {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .employee-card {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .form-container h2 {
+        font-size: 24px;
+    }
+
+    .formName,
+    .formLastname,
+    .formrole,
+    .formemail,
+    .formdepart {
+        font-size: 16px;
+    }
+
+    .formactions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .formactions button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .filterContainer {
+        width: 80%;
+    }
+}
