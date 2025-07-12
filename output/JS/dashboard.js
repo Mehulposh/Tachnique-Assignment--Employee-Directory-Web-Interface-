@@ -139,9 +139,8 @@ function EmployeeRender(data){
         filteredEmployees = employees.filter(emp => 
             emp.firstName.toLowerCase().includes(value) ||
             emp.lastName.toLowerCase().includes(value) ||
-            emp.email.toLowerCase().includes(value) ||
-            emp.department.toLowerCase().includes(value) ||
-            emp.role.toLowerCase().includes(value)
+            emp.email.toLowerCase().includes(value) 
+            
         );
 
         currPage = 1;
