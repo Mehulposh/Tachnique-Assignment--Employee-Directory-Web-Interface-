@@ -1,11 +1,12 @@
 const form = document.getElementById('employeeForm');//accessing the  dom element
 
 
+//listener executed after dom is fully loaded
 document.addEventListener('DOMContentLoaded' , () => {
     //method to get id from url
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
-    console.log(id);
+    
 
     if(id){
         //promise array for resolving the multiple promises

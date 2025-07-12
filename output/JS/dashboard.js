@@ -20,7 +20,7 @@ let currPage = 1;
 let pageSize = parseInt(employeePagination.value);
 let filteredEmployees = [...employees];//copy of the employees data
 
-//lestener to open filter form
+//listener to open filter form
 filterBtn.addEventListener('click' , () => {
     //toggle the visibility of the filter form
     filterContainer.style.display = filterContainer.style.display === 'none' ? 'block' : 'none';
@@ -85,7 +85,7 @@ resetBtn.addEventListener('click' , () => {
 
     //hide the filter form
     filterContainer.style.display = 'none';
-})
+});
 
 
 //Render the employeeList
