@@ -8,11 +8,12 @@ const addBtn = document.getElementById('addBtn');
 
 //elements for filter form
 const filterBtn = document.getElementById('filterBtn');
-const filterContainer =  document.getElementById('filterContainer');
+const filterContainer =  document.getElementsByClassName('filterContainer');
 const filterForm = document.getElementById('filterForm');
 const formContainer = document.getElementById('filter_form');
 const resetBtn = document.getElementById('resetFilters');
 
+console.log(document.getElementsByClassName('filterContainer'));
 
 let employees = [];//employee data
 let currPage = 1;
@@ -76,11 +77,14 @@ resetBtn.addEventListener('click' , () => {
     document.getElementById('filterRole').value = '' ;
 
     //restoring the complete employee data
-    filteredEmployees = [employees];
+    filteredEmployees = [...employees];
     currPage = 1 ;
 
     //rendering the employee list
     EmployeeRender(filteredEmployees);
+
+    //hide the filter form
+    formContainer.style.display = 'none';
 })
 
 
