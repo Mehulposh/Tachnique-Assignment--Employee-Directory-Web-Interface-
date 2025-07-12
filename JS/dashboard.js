@@ -13,7 +13,7 @@ const filterForm = document.getElementById('filterForm');
 const formContainer = document.getElementById('filter_form');
 const resetBtn = document.getElementById('resetFilters');
 
-console.log(document.getElementById('filterContainer'));
+
 
 let employees = [];//employee data
 let currPage = 1;
