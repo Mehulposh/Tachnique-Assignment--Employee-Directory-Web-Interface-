@@ -36,6 +36,14 @@ Open output/form.html to add/edit employees.
 <img width="444" height="608" alt="Screenshot 2025-07-12 110956" src="https://github.com/user-attachments/assets/f26eaef6-7fb3-4926-bfc2-9a732b9e1e99" />
 
 
+🖼️ Screenshots 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7fecaa46-d292-427b-bcf3-43fdebaef2a8" />
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/d1e74498-6559-4c27-9923-91c85bee3477" />
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/6a2276f4-99ea-4a82-b605-cb25a75789bf" />
+
 
 🖋️ About FreeMarker
 
