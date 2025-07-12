@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Add/Edit Employee</title>
-<link rel="stylesheet" href="../styles/styles.css">
+<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
 
@@ -62,6 +62,6 @@
     </p>
 </footer>
 
-<script src="../JS/form.js"></script>
+<script src="./JS/form.js"></script>
 </body>
 </html>
