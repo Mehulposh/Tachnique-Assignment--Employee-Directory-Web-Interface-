@@ -19,7 +19,7 @@
                     <p>Sort:</p>
                     <select id='employeeSort'>
                         <option value="" selected >--Select--</option>
-                        <option value="firstname">First Name</option>
+                        <option value="firstName">First Name</option>
                         <option value="department">Department</option>
                     </select>
                 </div>
