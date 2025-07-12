@@ -44,6 +44,33 @@
         
         
     </main>
+    <main class='filterContainer'>
+        <div id="filter_form" style="display: none;" class="filter-container">
+            <h3>Filter Employees</h3>
+            <form id="filterForm">
+            <div>
+                <label for="filterFirstName">First Name:</label>
+                <input type="text" id="filterFirstName" name="firstName">
+            </div>
+
+            <div>
+                <label for="filterDepartment">Department:</label>
+                <input type="text" id="filterDepartment" name="department">
+            </div>
+
+            <div>
+                <label for="filterRole">Role:</label>
+                <input type="text" id="filterRole" name="role">
+            </div>
+
+            <div>
+                <button type="submit">Apply</button>
+                <button type="button" id="resetFilters">Reset</button>
+            </div>
+            </form>
+        </div>
+
+    </main>
 
     <footer>
         <p>
