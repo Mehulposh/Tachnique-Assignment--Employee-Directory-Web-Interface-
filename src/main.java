@@ -19,6 +19,7 @@ public class Main {
                 mapper.readValue(new File("../EmployeeData.json"),
                         new TypeReference<List<Map<String, String>>>() {});
 
+        String employeesJsonStr = mapper.writeValueAsString(employees);
         System.out.println("✅ Loaded employees: " + employees.size());
 
         // Prepare empty employee for the add form
@@ -32,6 +33,8 @@ public class Main {
 
         // Data model for dashboard
         Map<String, Object> dashboardModel = new HashMap<>();
+        dashboardModel.put("employees", employees);
+        dashboardModel.put("employeesJsonString", employeesJsonStr);
         dashboardModel.put("employee", emptyEmployee);
 
         // Data model for standalone form

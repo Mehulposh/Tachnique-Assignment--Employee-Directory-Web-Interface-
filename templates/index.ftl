@@ -78,7 +78,10 @@
         </p>
     </footer>
 
-   
+    <#assign employeesJson = employeesJsonString>
+    <script>
+        let employees = ${employeesJson};
+    </script>
     <script src="./JS/dashboard.js"></script>
 </body>
 </html>

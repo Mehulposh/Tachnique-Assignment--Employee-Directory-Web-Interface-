@@ -15,7 +15,7 @@ const resetBtn = document.getElementById('resetFilters');
 
 
 
-let employees = [];//employee data
+// let employees = [];//employee data
 let currPage = 1;
 let pageSize = parseInt(employeePagination.value);
 let filteredEmployees = [...employees];//copy of the employees data
